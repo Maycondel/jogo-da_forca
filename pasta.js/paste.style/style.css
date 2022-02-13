@@ -1,10 +1,15 @@
 .flex-container {
    display: flex;
    flex-direction: row;
+   align-content: center;
+   margin-left: 300px;
+  
   }
   .conteiner{
   width: 20px;
   margin-left: 20px;
+
   border-bottom: 2px solid blue;
   text-align: center;
  }
+ 

@@ -1,10 +1,50 @@
+
 .flex-container {
+   position: relative;
    display: flex;
    flex-direction: row;
+   margin-left: 600px;
+   margin-top: 600px;
+   background-color: beige;
+   width: 300px;
+   
   }
   .conteiner{
   width: 20px;
   margin-left: 20px;
   border-bottom: 2px solid blue;
   text-align: center;
+  
  }
+#tabuleiro{
+   position: absolute;
+   width: 1200px;
+   height: 800px;
+   
+
+}
+#canvas{
+   display: block;
+   position: absolute;
+   margin-bottom: 155px;
+   margin-top: -700px; 
+   margin-left: 400px;
+
+}
+#local-erro{
+   margin-left: 600px;
+   color: red;
+}
+span{
+   position: absolute;
+   margin-left: 900px;
+   margin-top: -400px;
+   font-size: 30px;
+}
+#mensagem-perdeu{
+   color: red;
+
+}
+.ganhou{
+   color: green;
+}

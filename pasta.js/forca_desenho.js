@@ -1,11 +1,14 @@
 var caixa = document.querySelector('.flex-container')
 var localerro = document.querySelector('#local-erro')
 var palavraDaforca = ['ALURA','CHALLENGE','REACT','NODEJS','FORCA','INTERVALO','DESAFIO','NODE','FERSAO','ORACLE']
+var mensagem_perdeu = document.querySelector('#mensagem-perdeu')
+var mensagem_ganhou = document.querySelector('.ganhou')
 var numerodalista = 0
-
-var letracertas;
+var valores = [];
+var letracertas ;
+var acertos = []
 function busacadados (dados) {
-
+    
   return   document.querySelectorAll(dados)
     }
 
@@ -17,16 +20,18 @@ elementos.setAttribute('class',clase)
 elementos.setAttribute('id', id)
 
 }
-addEventListener('keydown',(e)=>{
+addEventListener('keypress',(e)=>{
     console.log(letracertas)
-var chaveteste = e.key.replaceAll(/[^a-zA-Z]/g,'').toUpperCase()
+var chaveteste = e.key.replace(/[^a-zA-Z]/g,'').toUpperCase()
  verificar_letra(chaveteste);
 });
 function verificar_letra(chaveteste){
 if (palavraDaforca[numerodalista].includes(chaveteste)){
     inserindotexto(palavraDaforca[numerodalista],chaveteste)
+   Ganhou(chaveteste)
 }else{
     mostrarerro(chaveteste)
+
 }
 }
 
@@ -53,14 +58,15 @@ for(let i = 0 ; i < palavra.length; i++){
 
 }
 function mostrarerro(letra){
-    if(!palavraDaforca[numerodalista].includes(letra) ){
-        alert('erro')
-    
-     localerro.innerHTML += ' ' +letra
-    
-    }else if(localerro.indexOf(letra) !== -1){
-  alert('letra ja digitada')
+    if (!verfificar_lista(letra,valores) && valores.length <= 8 ){
+        valores.push(letra)
+    localerro.innerHTML += letra 
+    desenha_forca(valores.length)
+ 
+    }else if (valores.length < 8){
+        alert('chute ja digitado')
     }
+  
 }
 
 function inserindotexto(palavra,letra){
@@ -69,9 +75,30 @@ function inserindotexto(palavra,letra){
     for  ( var  i  =  0 ;  i  <  palavra.length ;  i ++ )  {
         if  ( letra  ==  palavra[i] && letracertas[i].innerHTML ==  '')  {
             letracertas[i].innerHTML = letra;
-        }{
-
         }
-      
+        
+    }
+   
+}
+function verfificar_lista(letra ,valor){
+if(valor.indexOf(letra) != -1){
+    return true
+}else{
+    return false
 }
 }
+function perdeu(){
+  mensagem_perdeu.innerHTML = 'voce perdeu'     
+    
+}
+function Ganhou(lcertas){
+
+    if (!verfificar_lista(lcertas,acertos)  ){
+        acertos.push(lcertas)
+}
+ if(palavraDaforca[numerodalista].length == acertos.length){
+  mensagem_ganhou.innerHTML = 'Você ganhou'
+
+}
+}
+console.log(acertos)
