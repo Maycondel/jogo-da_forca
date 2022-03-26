@@ -1,3 +1,4 @@
+
 var tela_forca = document.querySelector('#canvas')
 var desenhar = tela_forca.getContext('2d')
 function desenha_forca(erro){
