@@ -5,23 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="./paste.style/style.css">
+<link rel="stylesheet" href="./paste.style/start.css">
+
 </head>
 <body >
-<div id="tabuleiro">
-        <section id="body">
-          <div class="flex-container"></div>
-          <p id="local-erro"></p>
-          <canvas id="canvas" width="700" height="600"></canvas>
-          </section>
-          <span id="mensagem-perdeu"  ></span>
-          <span class="ganhou"></span>
-          
-  </div>
- 
-      <p id="escrever"></p>
-    <script src="./pasta.js/forca_desenho.js"></script>
-    <script src="./pasta.js/canvas.js"></script>
-   
+    <header class="cabeçalho">
+        <h1 class="cabeçalho__titulo"> Jogo da Forca</h1>
+    </header>
+
+  <main class="todoConteudo">
+   <Section class="inicio">
+    
+     <ul class="inicio__conteudo">
+         <li class="inicio__item">
+            <label class="inicio__label"for=""> Adicionar nova palavra</label>
+            <input class="inicio__campo-imput" type="text">
+            <div class="inicio__butao-box">
+                <button class="inicio__butao">Adicionar</button>
+           </div>
+         </li>
+        <li class="inicio__item">
+            <button  class="inicio__butao"><a href="./jogo_da-forca.html">jogar</a ></button>
+        </li>
+        <li class="inicio__item">
+            <button class="inicio__butao">Creditos</button>
+        </li>
+     </ul>
+   </Section>
+
+  </main>
+     <script src="./pasta.js/iniciar-jogo.js"></script>
+  
+
 </body>
 </html>

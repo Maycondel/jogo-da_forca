@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./paste.style/style.css">
+  <link rel="stylesheet" href="./paste.style/reset.css">
+</head>
+<body>
+<header class="cabeçalho">
+  <h1  class="cabeçalho__titulo">Jogo da Forca</h1>
+  <ul class="cabeçalho__lista">
+    <li class="cabeçalho__item"> mayconbritoolivera@gmail.com</li>
+    <li class="cabeçalho__item"><a class="cabeçalho__link" href="">Linkedin</a></li>
+    <li class="cabeçalho__item"><a class="cabeçalho__link" href="">Github</a></li>
+  </ul>
+</header>
+  <div id="tabuleiro">
+    <section id="body">
+      <div class="flex-container"></div>
+      <div class="flex__erro"><p id="local-erro"></p></div>
+      <canvas id="canvas" width="700" height="600"></canvas>
+      </section>
+      <div class="tabuleiro__spans">
+      <span id="mensagem-perdeu"  ></span>
+      <span class="ganhou"></span>
+    </div>
+</div>
+  <footer class="rodape">
+    <h3>Jogo da fora</h3>
+    <p class="rodape__paragrafo">&copy; Desenvolvido por Maicon</p>
+    <ul class="rodape__lista">
+      <li class="rodape__redesocias rodape__github"></li>
+      <li class="rodape__redesocias rodape__instagram"> </li>
+      <li class="rodape__redesocias rodape__linkedin"> </li>
+    </ul>
+  </footer>
+  <script src="./pasta.js/canvas.js"></script>
+  <script src="./pasta.js/forca_desenho.js"></script>
+</body>
+</html>
